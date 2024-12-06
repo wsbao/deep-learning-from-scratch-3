@@ -16,7 +16,7 @@ class TestAdd(unittest.TestCase):
         self.assertTrue(array_equal(res, expected))
 
     def test_datatype(self):
-        """np.float64ではなく、0次元のndarrayを返すかどうか"""
+        """是否不返回np.float64，而是返回0维的ndarray"""
         x = Variable(np.array(2.0))
         y = x ** 2
         self.assertFalse(np.isscalar(y))

@@ -11,7 +11,7 @@ x1 = np.random.rand(1, 3, 7, 7)
 col1 = F.im2col(x1, kernel_size=5, stride=1, pad=0, to_matrix=True)
 print(col1.shape)  # (9, 75)
 
-x2 = np.random.rand(10, 3, 7, 7)  # 10個のデータ
+x2 = np.random.rand(10, 3, 7, 7)  # 10个数据
 kernel_size = (5, 5)
 stride = (1, 1)
 pad = (0, 0)

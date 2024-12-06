@@ -10,7 +10,7 @@ class TestSum(unittest.TestCase):
     def test_datatype(self):
         x = Variable(np.random.rand(10))
         y = F.sum(x)
-        # np.float64ではなく0次元のnp.ndarrayを返す
+        # 不返回np.float64，而是返回0维的ndarray
         self.assertFalse(np.isscalar(y))
 
     def test_forward1(self):
@@ -69,7 +69,7 @@ class TestSumTo(unittest.TestCase):
     def test_forward3(self):
         x = Variable(np.random.rand(10))
         y = F.sum_to(x, (10,))
-        expected = x.data  # 同じ形状なので何もしない
+        expected = x.data  # 由于形状相同，不做任何处理
         self.assertTrue(array_allclose(y.data, expected))
 
     def test_backward1(self):
